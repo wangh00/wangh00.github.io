@@ -54,5 +54,31 @@
   
   
   
+  <entry>
+    <title>某花顺cookie的v值以及整个登录流程逆向（附源码）</title>
+    <link href="/2024/12/13/%E6%9F%90%E8%8A%B1%E9%A1%BAcookie%E7%9A%84v%E5%80%BC%E4%BB%A5%E5%8F%8A%E6%95%B4%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B%E9%80%86%E5%90%91%EF%BC%88%E9%99%84%E6%BA%90%E7%A0%81%EF%BC%89/"/>
+    <url>/2024/12/13/%E6%9F%90%E8%8A%B1%E9%A1%BAcookie%E7%9A%84v%E5%80%BC%E4%BB%A5%E5%8F%8A%E6%95%B4%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B%E9%80%86%E5%90%91%EF%BC%88%E9%99%84%E6%BA%90%E7%A0%81%EF%BC%89/</url>
+    
+    <content type="html"><![CDATA[<h3 id="在学习登录接口的时候，网上有高手已经把流程梳理得很清晰了，原帖-登录流程梳理"><a href="#在学习登录接口的时候，网上有高手已经把流程梳理得很清晰了，原帖-登录流程梳理" class="headerlink" title="在学习登录接口的时候，网上有高手已经把流程梳理得很清晰了，原帖&gt;&gt; 登录流程梳理"></a>在学习登录接口的时候，网上有高手已经把流程梳理得很清晰了，原帖&gt;&gt; <a href="https://blog.csdn.net/qq_44906798/article/details/139812098">登录流程梳理</a></h3><h3 id="我也是弄完了才发现这个帖子的，我再在这个贴子的基础上进行更新一下。"><a href="#我也是弄完了才发现这个帖子的，我再在这个贴子的基础上进行更新一下。" class="headerlink" title="我也是弄完了才发现这个帖子的，我再在这个贴子的基础上进行更新一下。"></a>我也是弄完了才发现这个帖子的，我再在这个贴子的基础上进行更新一下。</h3><h3 id="网站的所有请求基本上都会携带一个v值，这是需要每次请求新生成的，"><a href="#网站的所有请求基本上都会携带一个v值，这是需要每次请求新生成的，" class="headerlink" title="网站的所有请求基本上都会携带一个v值，这是需要每次请求新生成的，"></a>网站的所有请求基本上都会携带一个v值，这是需要每次请求新生成的，</h3><h3 id="断点打在脚本上，刷新即可查看生成v值的cookie，全扣下来，稍微补几个环境即可，源码最下面"><a href="#断点打在脚本上，刷新即可查看生成v值的cookie，全扣下来，稍微补几个环境即可，源码最下面" class="headerlink" title="断点打在脚本上，刷新即可查看生成v值的cookie，全扣下来，稍微补几个环境即可，源码最下面."></a>断点打在脚本上，刷新即可查看生成v值的cookie，全扣下来，稍微补几个环境即可，源码最下面.</h3><img src="/2024/12/13/%E6%9F%90%E8%8A%B1%E9%A1%BAcookie%E7%9A%84v%E5%80%BC%E4%BB%A5%E5%8F%8A%E6%95%B4%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B%E9%80%86%E5%90%91%EF%BC%88%E9%99%84%E6%BA%90%E7%A0%81%EF%BC%89/v.png" class="" title="加密"><h3 id="然后就是登录的流程注意事项"><a href="#然后就是登录的流程注意事项" class="headerlink" title="然后就是登录的流程注意事项"></a>然后就是登录的流程注意事项</h3><img src="/2024/12/13/%E6%9F%90%E8%8A%B1%E9%A1%BAcookie%E7%9A%84v%E5%80%BC%E4%BB%A5%E5%8F%8A%E6%95%B4%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B%E9%80%86%E5%90%91%EF%BC%88%E9%99%84%E6%BA%90%E7%A0%81%EF%BC%89/liucheng.png" class="" title="加密"><h3 id="请求的时候每次都生成新的v值携带上"><a href="#请求的时候每次都生成新的v值携带上" class="headerlink" title="请求的时候每次都生成新的v值携带上"></a>请求的时候每次都生成新的v值携带上</h3><img src="/2024/12/13/%E6%9F%90%E8%8A%B1%E9%A1%BAcookie%E7%9A%84v%E5%80%BC%E4%BB%A5%E5%8F%8A%E6%95%B4%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B%E9%80%86%E5%90%91%EF%BC%88%E9%99%84%E6%BA%90%E7%A0%81%EF%BC%89/result.png" class="" title="加密"><h3 id="代码中对滑块验证失败的情况做了重新滑一次的操作，流程还是比较多的，不过代码没有混淆，难度并不高"><a href="#代码中对滑块验证失败的情况做了重新滑一次的操作，流程还是比较多的，不过代码没有混淆，难度并不高" class="headerlink" title="代码中对滑块验证失败的情况做了重新滑一次的操作，流程还是比较多的，不过代码没有混淆，难度并不高"></a>代码中对滑块验证失败的情况做了重新滑一次的操作，流程还是比较多的，不过代码没有混淆，难度并不高</h3><h3 id="至于加密的地方，由于没有混淆，直接搜加密参数名都能直接搜到，稍微复杂一点的加密就是"><a href="#至于加密的地方，由于没有混淆，直接搜加密参数名都能直接搜到，稍微复杂一点的加密就是" class="headerlink" title="至于加密的地方，由于没有混淆，直接搜加密参数名都能直接搜到，稍微复杂一点的加密就是"></a>至于加密的地方，由于没有混淆，直接搜加密参数名都能直接搜到，稍微复杂一点的加密就是</h3><p>dologinreturnjson2接口中的passwdSalt参数,各种加密套加密，用到的部分加密：</p><blockquote><p> (1)sha256(crnd+dsk)    （crud是随机数,dsk是getGS中的返回值）</p></blockquote><blockquote><p>(2) hamc_sha256</p></blockquote><blockquote><p>(3)md5，base64      </p></blockquote><img src="/2024/12/13/%E6%9F%90%E8%8A%B1%E9%A1%BAcookie%E7%9A%84v%E5%80%BC%E4%BB%A5%E5%8F%8A%E6%95%B4%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B%E9%80%86%E5%90%91%EF%BC%88%E9%99%84%E6%BA%90%E7%A0%81%EF%BC%89/jiami.png" class="" title="加密"><h3 id="部分源码在github-源码"><a href="#部分源码在github-源码" class="headerlink" title="部分源码在github,源码"></a>部分源码在github,<a href="https://github.com/wangh00/10jqka_login">源码</a></h3>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>某度旋转验证码逆向分析流程和源码</title>
+    <link href="/2024/07/24/%E6%9F%90%E5%BA%A6%E6%97%8B%E8%BD%AC%E9%AA%8C%E8%AF%81%E7%A0%81%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B%E5%92%8C%E6%BA%90%E7%A0%81/"/>
+    <url>/2024/07/24/%E6%9F%90%E5%BA%A6%E6%97%8B%E8%BD%AC%E9%AA%8C%E8%AF%81%E7%A0%81%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B%E5%92%8C%E6%BA%90%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<p>第一次 <a href="https://passport.baidu.com/cap/init">https://passport.baidu.com/cap/init</a> 接口，请求的 ak 是固定值，当然不同场景不同网站是不一样的，_ 时间戳，ver&#x3D;1，返回值 as、tk 都是后面会用到的。</p><p>请求 <a href="https://passport.baidu.com/cap/style">https://passport.baidu.com/cap/style</a> 接口，会用到tk值，得到验证码图片</p><p>使用到的加密方法:AES,MD5,SHA1,SHA3(魔改了tostring)</p><p>逻辑:</p><p>1.首先请求init和style获取参数和图片信息</p><p>2.下载图片并获取旋转角度(网上找个开源旋转验证码模型)</p><p>3.fuid每个设备都是固定的参数 </p><p>4.fs需要加密两次，两次都是AES，第二次需要用第一次的加密参数和图片的backstr(style接口返回)</p><p>5.使用init和style参数请求log接口返回op&#x3D;1即表示通过验证</p><p>ac_c&#x3D;angle *238 &#x2F; 360 ，可能会不定时改变</p><p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p><p>截止 2024-7-24：并未校验验证码轨迹，随便模拟一个就行,校验了旋转的角度参数ac_c</p><p>截止 2024-8-6：验证码增加了校验参数</p><img src="/2024/07/24/%E6%9F%90%E5%BA%A6%E6%97%8B%E8%BD%AC%E9%AA%8C%E8%AF%81%E7%A0%81%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B%E5%92%8C%E6%BA%90%E7%A0%81/result.png" class="" title="返回成功结果">]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
   
 </search>
