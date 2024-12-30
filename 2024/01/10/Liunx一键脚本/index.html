@@ -19,25 +19,25 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="事务:12345678910111213141516BEGIN TRANSACTION;BEGIN TRY-- 第一个操作：插入数据INSERT INTO table_name (column1, column2) VALUES (value1, value2);-- 第二个操作：更新数据UPDATE table_name SET column1 &#x3D; new_value WHERE conditi">
+    <meta name="description" content="宝塔面板:origin:https:&#x2F;&#x2F;ybfl.xyz&#x2F;sites&#x2F;158.html 1.直接安装V7.7.0的版本，之后的版本都会验证userInfo.json，虽然网上有大把的开心版，但不敢用啊。国外机可以用github，用下面的代码 作者github地址12curl -sSO https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;8838&#x2F;btpanel-v7.7.0&#x2F;mai">
 <meta property="og:type" content="article">
-<meta property="og:title" content="部分sql语句">
-<meta property="og:url" content="https://ww.whyyzs.top/2023/12/22/%E9%83%A8%E5%88%86sql%E8%AF%AD%E5%8F%A5/index.html">
+<meta property="og:title" content="Liunx一键脚本">
+<meta property="og:url" content="https://ww.whyyzs.top/2024/01/10/Liunx%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC/index.html">
 <meta property="og:site_name" content="二口">
-<meta property="og:description" content="事务:12345678910111213141516BEGIN TRANSACTION;BEGIN TRY-- 第一个操作：插入数据INSERT INTO table_name (column1, column2) VALUES (value1, value2);-- 第二个操作：更新数据UPDATE table_name SET column1 &#x3D; new_value WHERE conditi">
+<meta property="og:description" content="宝塔面板:origin:https:&#x2F;&#x2F;ybfl.xyz&#x2F;sites&#x2F;158.html 1.直接安装V7.7.0的版本，之后的版本都会验证userInfo.json，虽然网上有大把的开心版，但不敢用啊。国外机可以用github，用下面的代码 作者github地址12curl -sSO https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;8838&#x2F;btpanel-v7.7.0&#x2F;mai">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://api.likepoems.com/img/pixiv/">
-<meta property="article:published_time" content="2023-12-22T11:31:09.000Z">
-<meta property="article:modified_time" content="2024-12-30T11:39:28.699Z">
-<meta property="article:tag" content="Mysql">
+<meta property="og:image" content="https://api.lolimi.cn/API/dmtx/api.php">
+<meta property="article:published_time" content="2024-01-10T12:30:57.000Z">
+<meta property="article:modified_time" content="2024-12-30T12:51:53.959Z">
+<meta property="article:tag" content="tools">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://api.likepoems.com/img/pixiv/">
+<meta name="twitter:image" content="https://api.lolimi.cn/API/dmtx/api.php">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>部分sql语句 - 二口</title>
+  <title>Liunx一键脚本 - 二口</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="部分sql语句"></span>
+            <span id="subtitle" data-typed-text="Liunx一键脚本"></span>
           
         </div>
 
@@ -226,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-22 19:31" pubdate>
-          December 22, 2023 pm
+        <time datetime="2024-01-10 20:30" pubdate>
+          January 10, 2024 pm
         </time>
       </span>
     
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          234 words
+          663 words
         
       </span>
     
@@ -249,7 +249,7 @@
         
         
         
-          2 mins
+          6 mins
         
       </span>
     
@@ -295,22 +295,68 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">部分sql语句</h1>
+            <h1 id="seo-header">Liunx一键脚本</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="事务"><a href="#事务" class="headerlink" title="事务:"></a>事务:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs mysql">BEGIN TRANSACTION;<br>BEGIN TRY<br>-- 第一个操作：插入数据<br>INSERT INTO table_name (column1, column2) VALUES (value1, value2);<br><br>-- 第二个操作：更新数据<br>UPDATE table_name SET column1 = new_value WHERE condition;<br><br>-- 第三个操作：删除数据<br>DELETE FROM table_name WHERE condition;<br>COMMIT; -- 如果所有操作都成功，则提交事务<br><br>END TRY<br>BEGIN CATCH<br>ROLLBACK; -- 发生异常时回滚事务<br>END CATCH;<br></code></pre></td></tr></table></figure>
+                <h2 id="宝塔面板"><a href="#宝塔面板" class="headerlink" title="宝塔面板:"></a>宝塔面板:</h2><p>origin:<a target="_blank" rel="noopener" href="https://ybfl.xyz/sites/158.html">https://ybfl.xyz/sites/158.html</a></p>
+<h3 id="1-直接安装V7-7-0的版本，之后的版本都会验证userInfo-json，虽然网上有大把的开心版，但不敢用啊。"><a href="#1-直接安装V7-7-0的版本，之后的版本都会验证userInfo-json，虽然网上有大把的开心版，但不敢用啊。" class="headerlink" title="1.直接安装V7.7.0的版本，之后的版本都会验证userInfo.json，虽然网上有大把的开心版，但不敢用啊。"></a>1.直接安装V7.7.0的版本，之后的版本都会验证userInfo.json，虽然网上有大把的开心版，但不敢用啊。</h3><h4 id="国外机可以用github，用下面的代码-作者github地址"><a href="#国外机可以用github，用下面的代码-作者github地址" class="headerlink" title="国外机可以用github，用下面的代码 作者github地址"></a>国外机可以用github，用下面的代码 作者github地址</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -sSO https://raw.githubusercontent.com/8838/btpanel-v7.7.0/main/install/install_panel.sh &amp;&amp; bash install_panel.sh<br><br></code></pre></td></tr></table></figure>
+<p>国内机器，或者连不上github的，用下面这个代码 国内文件地址</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -sSO http://d.moe.ms/AAAAA/btpanel-v7.7.0/install/install_panel.sh &amp;&amp; bash install_panel.sh<br></code></pre></td></tr></table></figure>
+<p>Ps:代码都能看到，如果有疑问，大家可自行看源码。</p>
+<h3 id="2-开始开心版手动制作"><a href="#2-开始开心版手动制作" class="headerlink" title="2.开始开心版手动制作"></a>2.开始开心版手动制作</h3><blockquote>
+<p>1，屏蔽手机号</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sed -i &quot;s|bind_user == &#x27;True&#x27;|bind_user == &#x27;XXXX&#x27;|&quot; /www/server/panel/BTPanel/static/js/index.js<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>2.删除强制绑定手机js文件</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">rm -f /www/server/panel/data/bind.pl<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>3.还嫌麻烦，直接一键优化脚本吧</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget -O optimize.sh http://f.cccyun.cc/bt/optimize.sh &amp;&amp; bash optimize.sh<br></code></pre></td></tr></table></figure>
+<h3 id="插件开心版操作"><a href="#插件开心版操作" class="headerlink" title="插件开心版操作"></a>插件开心版操作</h3><p>1.手动解锁宝塔所有付费插件为永不过期<br>文件路径：&#x2F;www&#x2F;server&#x2F;panel&#x2F;data&#x2F;plugin.json<br>搜索字符串：”endtime”: -1全部替换为”endtime”: 999999999999</p>
+<p>2.给plugin.json文件上锁防止自动修复为免费版</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">chattr +i /www/server/panel/data/plugin.json<br></code></pre></td></tr></table></figure>
+<p>如果嫌烦，一键脚本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -sSO https://raw.githubusercontent.com/ztkink/bthappy/main/one_key_happy.sh &amp;&amp; bash one_key_happy.sh<br></code></pre></td></tr></table></figure>
+<p>已经安装了宝塔新版本,降级<br>1.下载离线包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget https://d.ybfl.xyz/bt/LinuxPanel-7.7.0.zip<br></code></pre></td></tr></table></figure>
+<p>2.解压缩</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">unzip LinuxPanel-7.7.0.zip<br></code></pre></td></tr></table></figure>
+<p>如有提示，输入大写A即可，全部替换<br>3.进入升级目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd /root/panel<br></code></pre></td></tr></table></figure>
+<p>4.运行降级</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash update.sh<br></code></pre></td></tr></table></figure>
+<p>然后重复上面屏蔽手机的代码和是否要开启开心版插件，自己定吧。</p>
+<h2 id="ygkkk"><a href="#ygkkk" class="headerlink" title="ygkkk"></a>ygkkk</h2><p>——-sing-box(<a target="_blank" rel="noopener" href="https://github.com/yonggekkk/sing-box_hysteria2_tuic_argo_reality)---------">https://github.com/yonggekkk/sing-box_hysteria2_tuic_argo_reality)---------</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(wget -qO- https://gitlab.com/rwkgyg/sing-box-yg/raw/main/sb.sh 2&gt; /dev/null)<br></code></pre></td></tr></table></figure>
+
+<p>———x-ui(origin:<a target="_blank" rel="noopener" href="https://github.com/yonggekkk/x-ui-yg)------------">https://github.com/yonggekkk/x-ui-yg)------------</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(wget -qO- https://gitlab.com/rwkgyg/x-ui-yg/raw/main/install.sh 2&gt; /dev/null)<br></code></pre></td></tr></table></figure>
+
+<h2 id="fscarmen"><a href="#fscarmen" class="headerlink" title="fscarmen"></a>fscarmen</h2><p>———ArgoX(origin:<a target="_blank" rel="noopener" href="https://github.com/fscarmen/ArgoX)------------">https://github.com/fscarmen/ArgoX)------------</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(wget -qO- https://raw.githubusercontent.com/fscarmen/argox/main/argox.sh)<br></code></pre></td></tr></table></figure>
+
+<p>———warp(origin:<a target="_blank" rel="noopener" href="https://github.com/fscarmen/warp)------------">https://github.com/fscarmen/warp)------------</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh &amp;&amp; bash menu.sh [option] [lisence/url/token]<br>再次运行:warp [option] [lisence]<br></code></pre></td></tr></table></figure>
 
 
-<h3 id="多行数据进行拼接，并以逗号分隔的功能（以期刊名称分组）"><a href="#多行数据进行拼接，并以逗号分隔的功能（以期刊名称分组）" class="headerlink" title="多行数据进行拼接，并以逗号分隔的功能（以期刊名称分组）"></a>多行数据进行拼接，并以逗号分隔的功能（以期刊名称分组）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT 期刊名称, GROUP_CONCAT(doi SEPARATOR &#x27;,&#x27;) AS names FROM articles GROUP BY 期刊名称;<br></code></pre></td></tr></table></figure>
 
 
-<h3 id="临时会话"><a href="#临时会话" class="headerlink" title="临时会话:"></a>临时会话:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mysql">创建临时表，当前会话使用：<br>CREATE TEMPORARY TABLE temp_table_name AS SELECT column1, column2, … FROM your_query;<br>创建临时表，当前查询语句使用：<br>WITH order_totals AS (<br>SELECT SUM(total) AS total_amount<br>FROM orders<br>WHERE order_date &lt;= &#x27;2022-02-28&#x27; )； SELECT total_amount FROM order_totals; <br></code></pre></td></tr></table></figure>
+<h2 id="mack-a"><a href="#mack-a" class="headerlink" title="mack-a"></a>mack-a</h2><p>origin:<a target="_blank" rel="noopener" href="https://www.v2ray-agent.com/archives/1680104902581">https://www.v2ray-agent.com/archives/1680104902581</a><br>wget -P &#x2F;root -N –no-check-certificate “<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh">https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh</a>“ &amp;&amp; chmod 700 &#x2F;root&#x2F;install.sh &amp;&amp; &#x2F;root&#x2F;install.sh</p>
+<h2 id="Misaka-blog"><a href="#Misaka-blog" class="headerlink" title="Misaka-blog"></a>Misaka-blog</h2><p>———Hysteria(origin:<a target="_blank" rel="noopener" href="https://github.com/Misaka-blog/hysteria-install)------------">https://github.com/Misaka-blog/hysteria-install)------------</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh &amp;&amp; bash hysteria.sh<br></code></pre></td></tr></table></figure>
+<p>Hysteria<br>内核下载页，<a target="_blank" rel="noopener" href="https://github.com/apernet/hysteria/releases/">https://github.com/apernet/hysteria/releases/</a></p>
+<h2 id="eooce大杂烩"><a href="#eooce大杂烩" class="headerlink" title="eooce大杂烩"></a>eooce大杂烩</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;&amp; chmod +x ssh_tool.sh &amp;&amp; ./ssh_tool.sh<br></code></pre></td></tr></table></figure>
+<p>测速：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(wget -qO- https://raw.githubusercontent.com/vpslog/script/main/bench.sh)<br></code></pre></td></tr></table></figure>
 
-<h3 id="根据条件进行条件判断和返回不同的结果："><a href="#根据条件进行条件判断和返回不同的结果：" class="headerlink" title="根据条件进行条件判断和返回不同的结果："></a>根据条件进行条件判断和返回不同的结果：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT * , CASE WHEN access=&#x27;Open Access&#x27; THEN &#x27;open&#x27; ELSE &#x27;no&#x27; END as &#x27;权限&#x27; FROM 5_15_articles 更新: UPDATE students SET grade = CASE WHEN score &gt;= 90 THEN &#x27;A&#x27;<br>WHEN score &gt;= 80 THEN &#x27;B&#x27;<br>WHEN score &gt;= 70 THEN &#x27;C&#x27;<br>WHEN score &gt;= 60 THEN &#x27;D&#x27;<br>ELSE &#x27;F&#x27;<br>END<br>WHERE score &gt;= 60;<br></code></pre></td></tr></table></figure>
+<p>x-ui:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)<br></code></pre></td></tr></table></figure>
 
-<h3 id="触发器："><a href="#触发器：" class="headerlink" title="触发器："></a>触发器：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT *<br>FROM pg_proc<br>WHERE proname = &#x27;set_date_on_insert&#x27;;<br><br>SELECT trigger_name, event_object_table, action_statement<br>FROM information_schema.triggers<br>WHERE event_object_table = &#x27;journal_article_list&#x27;;<br><br>CREATE TRIGGER update_trigger<br>BEFORE INSERT OR UPDATE ON journal_article_list<br>FOR EACH ROW<br>EXECUTE FUNCTION set_date_on_update();<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -322,7 +368,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Mysql/" class="print-no-link">#Mysql</a>
+        <a href="/tags/tools/" class="print-no-link">#tools</a>
       
     </div>
   
@@ -334,15 +380,15 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>部分sql语句</div>
-      <div>https://ww.whyyzs.top/2023/12/22/部分sql语句/</div>
+      <div>Liunx一键脚本</div>
+      <div>https://ww.whyyzs.top/2024/01/10/Liunx一键脚本/</div>
     </div>
     <div class="license-meta">
       
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>December 22, 2023</div>
+          <div>January 10, 2024</div>
         </div>
       
       
@@ -374,15 +420,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/01/10/Liunx%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC/" title="Liunx一键脚本">
+                      <a href="/2024/07/24/%E6%9F%90%E5%BA%A6%E6%97%8B%E8%BD%AC%E9%AA%8C%E8%AF%81%E7%A0%81%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B%E5%92%8C%E6%BA%90%E7%A0%81/" title="某度旋转验证码逆向分析流程和源码">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Liunx一键脚本</span>
+                        <span class="hidden-mobile">某度旋转验证码逆向分析流程和源码</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/12/22/%E9%83%A8%E5%88%86sql%E8%AF%AD%E5%8F%A5/" title="部分sql语句">
+                        <span class="hidden-mobile">部分sql语句</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

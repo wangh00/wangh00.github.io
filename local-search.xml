@@ -90,7 +90,7 @@
     
     <tags>
       
-      <tag>JavaScript</tag>
+      <tag>JS逆向</tag>
       
     </tags>
     
@@ -109,9 +109,9 @@
     
     <tags>
       
-      <tag>Python</tag>
-      
       <tag>JS逆向</tag>
+      
+      <tag>Python</tag>
       
     </tags>
     
@@ -130,9 +130,28 @@
     
     <tags>
       
+      <tag>JS逆向</tag>
+      
       <tag>Python</tag>
       
-      <tag>JS逆向</tag>
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Liunx一键脚本</title>
+    <link href="/2024/01/10/Liunx%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC/"/>
+    <url>/2024/01/10/Liunx%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC/</url>
+    
+    <content type="html"><![CDATA[<h2 id="宝塔面板"><a href="#宝塔面板" class="headerlink" title="宝塔面板:"></a>宝塔面板:</h2><p>origin:<a href="https://ybfl.xyz/sites/158.html">https://ybfl.xyz/sites/158.html</a></p><h3 id="1-直接安装V7-7-0的版本，之后的版本都会验证userInfo-json，虽然网上有大把的开心版，但不敢用啊。"><a href="#1-直接安装V7-7-0的版本，之后的版本都会验证userInfo-json，虽然网上有大把的开心版，但不敢用啊。" class="headerlink" title="1.直接安装V7.7.0的版本，之后的版本都会验证userInfo.json，虽然网上有大把的开心版，但不敢用啊。"></a>1.直接安装V7.7.0的版本，之后的版本都会验证userInfo.json，虽然网上有大把的开心版，但不敢用啊。</h3><h4 id="国外机可以用github，用下面的代码-作者github地址"><a href="#国外机可以用github，用下面的代码-作者github地址" class="headerlink" title="国外机可以用github，用下面的代码 作者github地址"></a>国外机可以用github，用下面的代码 作者github地址</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -sSO https://raw.githubusercontent.com/8838/btpanel-v7.7.0/main/install/install_panel.sh &amp;&amp; bash install_panel.sh<br><br></code></pre></td></tr></table></figure><p>国内机器，或者连不上github的，用下面这个代码 国内文件地址</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -sSO http://d.moe.ms/AAAAA/btpanel-v7.7.0/install/install_panel.sh &amp;&amp; bash install_panel.sh<br></code></pre></td></tr></table></figure><p>Ps:代码都能看到，如果有疑问，大家可自行看源码。</p><h3 id="2-开始开心版手动制作"><a href="#2-开始开心版手动制作" class="headerlink" title="2.开始开心版手动制作"></a>2.开始开心版手动制作</h3><blockquote><p>1，屏蔽手机号</p></blockquote><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sed -i &quot;s|bind_user == &#x27;True&#x27;|bind_user == &#x27;XXXX&#x27;|&quot; /www/server/panel/BTPanel/static/js/index.js<br></code></pre></td></tr></table></figure><blockquote><p>2.删除强制绑定手机js文件</p></blockquote><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">rm -f /www/server/panel/data/bind.pl<br></code></pre></td></tr></table></figure><blockquote><p>3.还嫌麻烦，直接一键优化脚本吧</p></blockquote><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget -O optimize.sh http://f.cccyun.cc/bt/optimize.sh &amp;&amp; bash optimize.sh<br></code></pre></td></tr></table></figure><h3 id="插件开心版操作"><a href="#插件开心版操作" class="headerlink" title="插件开心版操作"></a>插件开心版操作</h3><p>1.手动解锁宝塔所有付费插件为永不过期<br>文件路径：&#x2F;www&#x2F;server&#x2F;panel&#x2F;data&#x2F;plugin.json<br>搜索字符串：”endtime”: -1全部替换为”endtime”: 999999999999</p><p>2.给plugin.json文件上锁防止自动修复为免费版</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">chattr +i /www/server/panel/data/plugin.json<br></code></pre></td></tr></table></figure><p>如果嫌烦，一键脚本</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -sSO https://raw.githubusercontent.com/ztkink/bthappy/main/one_key_happy.sh &amp;&amp; bash one_key_happy.sh<br></code></pre></td></tr></table></figure><p>已经安装了宝塔新版本,降级<br>1.下载离线包</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget https://d.ybfl.xyz/bt/LinuxPanel-7.7.0.zip<br></code></pre></td></tr></table></figure><p>2.解压缩</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">unzip LinuxPanel-7.7.0.zip<br></code></pre></td></tr></table></figure><p>如有提示，输入大写A即可，全部替换<br>3.进入升级目录</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd /root/panel<br></code></pre></td></tr></table></figure><p>4.运行降级</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash update.sh<br></code></pre></td></tr></table></figure><p>然后重复上面屏蔽手机的代码和是否要开启开心版插件，自己定吧。</p><h2 id="ygkkk"><a href="#ygkkk" class="headerlink" title="ygkkk"></a>ygkkk</h2><p>——-sing-box(<a href="https://github.com/yonggekkk/sing-box_hysteria2_tuic_argo_reality)---------">https://github.com/yonggekkk/sing-box_hysteria2_tuic_argo_reality)---------</a></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(wget -qO- https://gitlab.com/rwkgyg/sing-box-yg/raw/main/sb.sh 2&gt; /dev/null)<br></code></pre></td></tr></table></figure><p>———x-ui(origin:<a href="https://github.com/yonggekkk/x-ui-yg)------------">https://github.com/yonggekkk/x-ui-yg)------------</a></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(wget -qO- https://gitlab.com/rwkgyg/x-ui-yg/raw/main/install.sh 2&gt; /dev/null)<br></code></pre></td></tr></table></figure><h2 id="fscarmen"><a href="#fscarmen" class="headerlink" title="fscarmen"></a>fscarmen</h2><p>———ArgoX(origin:<a href="https://github.com/fscarmen/ArgoX)------------">https://github.com/fscarmen/ArgoX)------------</a></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(wget -qO- https://raw.githubusercontent.com/fscarmen/argox/main/argox.sh)<br></code></pre></td></tr></table></figure><p>———warp(origin:<a href="https://github.com/fscarmen/warp)------------">https://github.com/fscarmen/warp)------------</a></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh &amp;&amp; bash menu.sh [option] [lisence/url/token]<br>再次运行:warp [option] [lisence]<br></code></pre></td></tr></table></figure><h2 id="mack-a"><a href="#mack-a" class="headerlink" title="mack-a"></a>mack-a</h2><p>origin:<a href="https://www.v2ray-agent.com/archives/1680104902581">https://www.v2ray-agent.com/archives/1680104902581</a><br>wget -P &#x2F;root -N –no-check-certificate “<a href="https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh">https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh</a>“ &amp;&amp; chmod 700 &#x2F;root&#x2F;install.sh &amp;&amp; &#x2F;root&#x2F;install.sh</p><h2 id="Misaka-blog"><a href="#Misaka-blog" class="headerlink" title="Misaka-blog"></a>Misaka-blog</h2><p>———Hysteria(origin:<a href="https://github.com/Misaka-blog/hysteria-install)------------">https://github.com/Misaka-blog/hysteria-install)------------</a></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh &amp;&amp; bash hysteria.sh<br></code></pre></td></tr></table></figure><p>Hysteria<br>内核下载页，<a href="https://github.com/apernet/hysteria/releases/">https://github.com/apernet/hysteria/releases/</a></p><h2 id="eooce大杂烩"><a href="#eooce大杂烩" class="headerlink" title="eooce大杂烩"></a>eooce大杂烩</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;&amp; chmod +x ssh_tool.sh &amp;&amp; ./ssh_tool.sh<br></code></pre></td></tr></table></figure><p>测速：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(wget -qO- https://raw.githubusercontent.com/vpslog/script/main/bench.sh)<br></code></pre></td></tr></table></figure><p>x-ui:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash &lt;(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>tools</tag>
       
     </tags>
     
