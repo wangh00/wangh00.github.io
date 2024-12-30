@@ -63,6 +63,14 @@
     
     
     
+    <tags>
+      
+      <tag>Python</tag>
+      
+      <tag>JS逆向</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -75,6 +83,14 @@
     <content type="html"><![CDATA[<p>第一次 <a href="https://passport.baidu.com/cap/init">https://passport.baidu.com/cap/init</a> 接口，请求的 ak 是固定值，当然不同场景不同网站是不一样的，_ 时间戳，ver&#x3D;1，返回值 as、tk 都是后面会用到的。</p><p>请求 <a href="https://passport.baidu.com/cap/style">https://passport.baidu.com/cap/style</a> 接口，会用到tk值，得到验证码图片</p><p>使用到的加密方法:AES,MD5,SHA1,SHA3(魔改了tostring)</p><p>逻辑:</p><p>1.首先请求init和style获取参数和图片信息</p><p>2.下载图片并获取旋转角度(网上找个开源旋转验证码模型)</p><p>3.fuid每个设备都是固定的参数 </p><p>4.fs需要加密两次，两次都是AES，第二次需要用第一次的加密参数和图片的backstr(style接口返回)</p><p>5.使用init和style参数请求log接口返回op&#x3D;1即表示通过验证</p><p>ac_c&#x3D;angle *238 &#x2F; 360 ，可能会不定时改变</p><p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p><p>截止 2024-7-24：并未校验验证码轨迹，随便模拟一个就行,校验了旋转的角度参数ac_c</p><p>截止 2024-8-6：验证码增加了校验参数</p><img src="/2024/07/24/%E6%9F%90%E5%BA%A6%E6%97%8B%E8%BD%AC%E9%AA%8C%E8%AF%81%E7%A0%81%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B%E5%92%8C%E6%BA%90%E7%A0%81/result.png" class="" title="返回成功结果">]]></content>
     
     
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+      <tag>JS逆向</tag>
+      
+    </tags>
     
   </entry>
   
