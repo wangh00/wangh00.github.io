@@ -19,26 +19,25 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第一次 https:&#x2F;&#x2F;passport.baidu.com&#x2F;cap&#x2F;init 接口，请求的 ak 是固定值，当然不同场景不同网站是不一样的，_ 时间戳，ver&#x3D;1，返回值 as、tk 都是后面会用到的。 请求 https:&#x2F;&#x2F;passport.baidu.com&#x2F;cap&#x2F;style 接口，会用到tk值，得到验证码图片 使用到的加密方法:AES,MD5,SHA1,SHA3(魔改了tost">
+    <meta name="description" content="网上的教程有很多，基本上大同小异。但是安装软件有时就可能因为一个细节安装失败。我也是综合了很多个教程才安装好的，所以本教程可能也不是普遍适合的。源自 1、下载zip安装包： MySQL8.0 For Windows zip包下载地址：https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F;file&#x2F;?id&#x3D;476233 进入页面后可以不登录。后点击底部“No thanks, just st">
 <meta property="og:type" content="article">
-<meta property="og:title" content="某度旋转验证码逆向分析流程和源码">
-<meta property="og:url" content="https://ww.whyyzs.top/2024/07/24/%E6%9F%90%E5%BA%A6%E6%97%8B%E8%BD%AC%E9%AA%8C%E8%AF%81%E7%A0%81%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B%E5%92%8C%E6%BA%90%E7%A0%81/index.html">
+<meta property="og:title" content="Mysql快速安装流程">
+<meta property="og:url" content="https://ww.whyyzs.top/2024/12/30/Mysql%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B/index.html">
 <meta property="og:site_name" content="二口">
-<meta property="og:description" content="第一次 https:&#x2F;&#x2F;passport.baidu.com&#x2F;cap&#x2F;init 接口，请求的 ak 是固定值，当然不同场景不同网站是不一样的，_ 时间戳，ver&#x3D;1，返回值 as、tk 都是后面会用到的。 请求 https:&#x2F;&#x2F;passport.baidu.com&#x2F;cap&#x2F;style 接口，会用到tk值，得到验证码图片 使用到的加密方法:AES,MD5,SHA1,SHA3(魔改了tost">
+<meta property="og:description" content="网上的教程有很多，基本上大同小异。但是安装软件有时就可能因为一个细节安装失败。我也是综合了很多个教程才安装好的，所以本教程可能也不是普遍适合的。源自 1、下载zip安装包： MySQL8.0 For Windows zip包下载地址：https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F;file&#x2F;?id&#x3D;476233 进入页面后可以不登录。后点击底部“No thanks, just st">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://ww.whyyzs.top/img/js%E9%80%86%E5%90%91.png">
-<meta property="article:published_time" content="2024-07-24T03:51:14.000Z">
-<meta property="article:modified_time" content="2024-12-30T05:34:48.553Z">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="JS逆向">
+<meta property="og:image" content="https://api.lolimi.cn/API/dmtx/pc.php">
+<meta property="article:published_time" content="2024-12-30T09:11:14.000Z">
+<meta property="article:modified_time" content="2024-12-30T09:28:45.441Z">
+<meta property="article:tag" content="Mysql">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://ww.whyyzs.top/img/js%E9%80%86%E5%90%91.png">
+<meta name="twitter:image" content="https://api.lolimi.cn/API/dmtx/pc.php">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>某度旋转验证码逆向分析流程和源码 - 二口</title>
+  <title>Mysql快速安装流程 - 二口</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -216,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="某度旋转验证码逆向分析流程和源码"></span>
+            <span id="subtitle" data-typed-text="Mysql快速安装流程"></span>
           
         </div>
 
@@ -227,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-24 11:51" pubdate>
-          July 24, 2024 am
+        <time datetime="2024-12-30 17:11" pubdate>
+          December 30, 2024 pm
         </time>
       </span>
     
@@ -239,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          322 words
+          1.2k words
         
       </span>
     
@@ -250,7 +249,7 @@
         
         
         
-          3 mins
+          11 mins
         
       </span>
     
@@ -296,26 +295,73 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">某度旋转验证码逆向分析流程和源码</h1>
+            <h1 id="seo-header">Mysql快速安装流程</h1>
             
             
               <div class="markdown-body">
                 
-                <p>第一次 <a target="_blank" rel="noopener" href="https://passport.baidu.com/cap/init">https://passport.baidu.com/cap/init</a> 接口，请求的 ak 是固定值，当然不同场景不同网站是不一样的，_ 时间戳，ver&#x3D;1，返回值 as、tk 都是后面会用到的。</p>
-<p>请求 <a target="_blank" rel="noopener" href="https://passport.baidu.com/cap/style">https://passport.baidu.com/cap/style</a> 接口，会用到tk值，得到验证码图片</p>
-<p>使用到的加密方法:AES,MD5,SHA1,SHA3(魔改了tostring)</p>
-<p>逻辑:</p>
-<p>1.首先请求init和style获取参数和图片信息</p>
-<p>2.下载图片并获取旋转角度(网上找个开源旋转验证码模型)</p>
-<p>3.fuid每个设备都是固定的参数 </p>
-<p>4.fs需要加密两次，两次都是AES，第二次需要用第一次的加密参数和图片的backstr(style接口返回)</p>
-<p>5.使用init和style参数请求log接口返回op&#x3D;1即表示通过验证</p>
-<p>ac_c&#x3D;angle *238 &#x2F; 360 ，可能会不定时改变</p>
-<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
-<p>截止 2024-7-24：并未校验验证码轨迹，随便模拟一个就行,校验了旋转的角度参数ac_c</p>
-<p>截止 2024-8-6：验证码增加了校验参数</p>
-<img src="/2024/07/24/%E6%9F%90%E5%BA%A6%E6%97%8B%E8%BD%AC%E9%AA%8C%E8%AF%81%E7%A0%81%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B%E5%92%8C%E6%BA%90%E7%A0%81/result.png" srcset="/img/loading.gif" lazyload class="" title="返回成功结果">
+                <h2 id="网上的教程有很多，基本上大同小异。但是安装软件有时就可能因为一个细节安装失败。我也是综合了很多个教程才安装好的，所以本教程可能也不是普遍适合的。"><a href="#网上的教程有很多，基本上大同小异。但是安装软件有时就可能因为一个细节安装失败。我也是综合了很多个教程才安装好的，所以本教程可能也不是普遍适合的。" class="headerlink" title="网上的教程有很多，基本上大同小异。但是安装软件有时就可能因为一个细节安装失败。我也是综合了很多个教程才安装好的，所以本教程可能也不是普遍适合的。"></a>网上的教程有很多，基本上大同小异。但是安装软件有时就可能因为一个细节安装失败。我也是综合了很多个教程才安装好的，所以本教程可能也不是普遍适合的。</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/laumians-notes/p/9069498.html">源自</a></p>
+<h3 id="1、下载zip安装包："><a href="#1、下载zip安装包：" class="headerlink" title="1、下载zip安装包："></a>1、下载zip安装包：</h3><blockquote>
+<p>MySQL8.0 For Windows zip包下载地址：<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/file/?id=476233">https://dev.mysql.com/downloads/file/?id=476233</a></p>
+<p>进入页面后可以不登录。后点击底部“No thanks, just start my download.”即可开始下载。</p>
+</blockquote>
+<h3 id="2、安装"><a href="#2、安装" class="headerlink" title="2、安装"></a>2、安装</h3><h4 id="2-1-解压zip包到安装目录"><a href="#2-1-解压zip包到安装目录" class="headerlink" title="2.1    解压zip包到安装目录"></a>2.1    解压zip包到安装目录</h4>1
 
+<p>我的解压在了E:\software\mysql\mysql-8.0.11-winx64</p>
+<p>解压后的文件目录</p>
+<h4 id="2-2-配置环境变量"><a href="#2-2-配置环境变量" class="headerlink" title="2.2 配置环境变量"></a>2.2 配置环境变量</h4><p>　　　　将解压文件夹下的bin路径添加到变量值中，前后以 ; 开头结尾</p>
+<h4 id="2-3-配置初始化的my-ini文件"><a href="#2-3-配置初始化的my-ini文件" class="headerlink" title="2.3 配置初始化的my.ini文件"></a>2.3 配置初始化的my.ini文件</h4><blockquote>
+<p>我们发现解压后的目录并没有my.ini文件，没关系可以自行创建。在安装根目录下添加 my.ini（新建文本文件，将文件类型改为.ini），写入基本配置：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash">[mysqld]<br><span class="hljs-comment"># 设置3306端口</span><br>port=3306<br><span class="hljs-comment"># 设置mysql的安装目录</span><br>basedir=E:\\software\\mysql\\mysql-8.0.11-winx64   <span class="hljs-comment"># 切记此处一定要用双斜杠\\，单斜杠我这里会出错，不过看别人的教程，有的是单斜杠。自己尝试吧</span><br><span class="hljs-comment"># 设置mysql数据库的数据的存放目录</span><br>datadir=E:\\software\\mysql\\mysql-8.0.11-winx64\\Data   <span class="hljs-comment"># 此处同上</span><br><span class="hljs-comment"># 允许最大连接数</span><br>max_connections=200<br><span class="hljs-comment"># 允许连接失败的次数。这是为了防止有人从该主机试图攻击数据库系统</span><br>max_connect_errors=10<br><span class="hljs-comment"># 服务端使用的字符集默认为UTF8</span><br>character-set-server=utf8<br><span class="hljs-comment"># 创建新表时将使用的默认存储引擎</span><br>default-storage-engine=INNODB<br><span class="hljs-comment"># 默认使用“mysql_native_password”插件认证</span><br>default_authentication_plugin=mysql_native_password<br>[mysql]<br><span class="hljs-comment"># 设置mysql客户端默认字符集 </span><br>default-character-set=utf8<br><span class="hljs-comment"># 设置mysql客户端连接服务端时默认使用的端口 </span><br>port=3306 <br>default-character-set=utf8<br></code></pre></td></tr></table></figure>
+2
+<p>注意：其中的data目录不需要创建，下一步初始化工作中会自动创建。</p>
+<h3 id="3、安装mysql"><a href="#3、安装mysql" class="headerlink" title="3、安装mysql"></a>3、安装mysql</h3><p>在安装时，必须以管理员身份运行cmd，否则在安装时会报错，会导致安装失败的情况</p>
+3
+<h4 id="3-1-初始化数据库"><a href="#3-1-初始化数据库" class="headerlink" title="3.1 初始化数据库"></a>3.1 初始化数据库</h4><p>在MySQL安装目录的 bin 目录下执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mysqld --initialize --console<br></code></pre></td></tr></table></figure>
+
+
+<p>执行完成后，会打印 root 用户的初始默认密码，比如:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">2018-04-28T15:57:17.087519Z 0 [System] [MY-013169] [Server] C:\Program Files\MySQL\bin\mysqld.exe (mysqld 8.0.11) initializing of server <span class="hljs-keyword">in</span> progress as process 4984<br>2018-04-28T15:57:24.859249Z 5 [Note] [MY-010454] [Server] A temporary password is generated <span class="hljs-keyword">for</span> root@localhost: rI5rvf5x5G,E<br>2018-04-28T15:57:27.106660Z 0 [System] [MY-013170] [Server] C:\Program Files\MySQL\bin\mysqld.exe (mysqld 8.0.11) initializing of server has completed<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意！执行输出结果里面有一段： [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: rI5rvf5x5G,E    其中root@localhost:后面的“rI5rvf5x5G,E”就是初始密码（不含首位空格）。在没有更改密码前，需要记住这个密码，后续登录需要用到。</p>
+</blockquote>
+<p>要是你手贱，关快了，或者没记住，那也没事，删掉初始化的 datadir 目录，再执行一遍初始化命令，又会重新生成的。当然，也可以使用安全工具，强制改密码，用什么方法，自己随意。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/data-directory-initialization-mysqld.html">https://dev.mysql.com/doc/refman/8.0/en/data-directory-initialization-mysqld.html</a></p>
+<h4 id="3-2-安装服务"><a href="#3-2-安装服务" class="headerlink" title="3.2 安装服务"></a>3.2 安装服务</h4><p>在MySQL安装目录的 bin 目录下执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mysqld --install [服务名]<br></code></pre></td></tr></table></figure>
+
+<p>后面的服务名可以不写，默认的名字为 mysql。当然，如果你的电脑上需要安装多个MySQL服务，就可以用不同的名字区分了，比如 mysql5 和 mysql8。</p>
+<p>安装完成之后，就可以通过命令net start mysql启动MySQL的服务了。通过命令<code>net stop mysql</code>停止服务。通过<code>命令sc delete MySQL/mysqld -remove</code>卸载 MySQL 服务</p>
+<h3 id="4、更改密码"><a href="#4、更改密码" class="headerlink" title="4、更改密码"></a>4、更改密码</h3><p>在MySQL安装目录的 bin 目录下执行命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">mysql -u root -p<br></code></pre></td></tr></table></figure>
+<p>这时候会提示输入密码，记住了上面第3.1步安装时的密码，填入即可登录成功，进入MySQL命令模式。</p>
+<p>在MySQL中执行命令：</p>
+<p>ALTER USER ‘root‘@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘新密码’;        </p>
+<p>修改密码，注意命令尾的；一定要有，这是mysql的语法<br>到此，安装部署就完成了。官方说测试速度MySQL8比5快两倍。</p>
+<p>可以用 命令查看一下默认安装的数据库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs mysql">show databases;<br>use mysql;<br>show tables;<br></code></pre></td></tr></table></figure>
+
+<p>看到默认初始化了mysql数据库，其中user表里面存储MySQL用户信息。我们可以看一下默认MySQL用户：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs mysql">mysql&gt; select user,host,authentication_string from mysql.user;<br>+------------------+-----------+-------------------------------------------+<br>| user             | host      | authentication_string                     |<br>+------------------+-----------+-------------------------------------------+<br>| mysql.infoschema | localhost | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |<br>| mysql.session    | localhost | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |<br>| mysql.sys        | localhost | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |<br>| root             | localhost | *27C237A977F4F44D3F551F1A673BE14DFD232961 |<br>+------------------+-----------+-------------------------------------------+<br>4 rows in set (0.00 sec)<br><br></code></pre></td></tr></table></figure>
+
+<p>管理员root的host是localhost，代表仅限localhost登录访问。如果要允许开放其他ip登录，则需要添加新的host。如果要允许所有ip访问，可以直接修改成“%”</p>
+<p>创建用户：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">CREATE USER &#x27;xxh&#x27;@&#x27;%&#x27; IDENTIFIED WITH mysql_native_password BY &#x27;xxh123!@#&#x27;;<br></code></pre></td></tr></table></figure>
+<p>需要注意：mysql8.0加密方式修改了<br>检查用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql">select user, host, plugin, authentication_string from user\G;<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="授权远程数据库"><a href="#授权远程数据库" class="headerlink" title="授权远程数据库"></a>授权远程数据库</h3><blockquote>
+<p>授权所有权限 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">GRANT ALL PRIVILEGES ON *.* TO &#x27;xxh&#x27;@&#x27;%&#x27;；<br></code></pre></td></tr></table></figure>
+
+<p>授权基本的查询修改权限，按需求设置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER ON *.* TO &#x27;xxh&#x27;@&#x27;%&#x27;;<br></code></pre></td></tr></table></figure>
+<p>查看用户权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">show grants for &#x27;xxh&#x27;@&#x27;%&#x27;;<br></code></pre></td></tr></table></figure>
+</blockquote>
 
                 
               </div>
@@ -328,9 +374,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
-      
-        <a href="/tags/JS%E9%80%86%E5%90%91/" class="print-no-link">#JS逆向</a>
+        <a href="/tags/Mysql/" class="print-no-link">#Mysql</a>
       
     </div>
   
@@ -342,15 +386,15 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>某度旋转验证码逆向分析流程和源码</div>
-      <div>https://ww.whyyzs.top/2024/07/24/某度旋转验证码逆向分析流程和源码/</div>
+      <div>Mysql快速安装流程</div>
+      <div>https://ww.whyyzs.top/2024/12/30/Mysql快速安装流程/</div>
     </div>
     <div class="license-meta">
       
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>July 24, 2024</div>
+          <div>December 30, 2024</div>
         </div>
       
       
@@ -382,15 +426,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/12/13/%E6%9F%90%E8%8A%B1%E9%A1%BAcookie%E7%9A%84v%E5%80%BC%E4%BB%A5%E5%8F%8A%E6%95%B4%E4%B8%AA%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B%E9%80%86%E5%90%91%EF%BC%88%E9%99%84%E6%BA%90%E7%A0%81%EF%BC%89/" title="某花顺cookie的v值以及整个登录流程逆向（附源码）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">某花顺cookie的v值以及整个登录流程逆向（附源码）</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2024/12/30/%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6-%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9-%E8%A2%AB%E5%93%AA%E4%B8%AA%E8%BF%9B%E7%A8%8B%E4%BD%BF%E7%94%A8%E3%80%90%E6%96%87%E4%BB%B6%E5%B7%B2%E5%9C%A8%E5%8F%A6%E4%B8%80%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%89%93%E5%BC%80%E3%80%91/" title="查看文件(或文件夹)被哪个进程使用【文件已在另一程序中打开】">
+                        <span class="hidden-mobile">查看文件(或文件夹)被哪个进程使用【文件已在另一程序中打开】</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
