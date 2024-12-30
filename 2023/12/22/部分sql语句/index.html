@@ -19,25 +19,25 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="pycurl是python的用于请求的第三方库， 1.支持http2 2.能修改ja3指纹来通过浏览器tls指纹校验  流程 1.下载pycurl的编译包,[下载链接]   2.因为pycurl底层是有c所写，需要用到visual studio 生成工具，下载链接   3.以2022版本为例，下载生成工具后打开”x64 Native Tools Command Prompt for VS 2022">
+    <meta name="description" content="事务:12345678910111213141516BEGIN TRANSACTION;BEGIN TRY-- 第一个操作：插入数据INSERT INTO table_name (column1, column2) VALUES (value1, value2);-- 第二个操作：更新数据UPDATE table_name SET column1 &#x3D; new_value WHERE conditi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python的请求库Pycurl编译流程">
-<meta property="og:url" content="https://ww.whyyzs.top/2024/12/30/Python%E7%9A%84%E8%AF%B7%E6%B1%82%E5%BA%93Pycurl%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B/index.html">
+<meta property="og:title" content="部分sql语句">
+<meta property="og:url" content="https://ww.whyyzs.top/2023/12/22/%E9%83%A8%E5%88%86sql%E8%AF%AD%E5%8F%A5/index.html">
 <meta property="og:site_name" content="二口">
-<meta property="og:description" content="pycurl是python的用于请求的第三方库， 1.支持http2 2.能修改ja3指纹来通过浏览器tls指纹校验  流程 1.下载pycurl的编译包,[下载链接]   2.因为pycurl底层是有c所写，需要用到visual studio 生成工具，下载链接   3.以2022版本为例，下载生成工具后打开”x64 Native Tools Command Prompt for VS 2022">
+<meta property="og:description" content="事务:12345678910111213141516BEGIN TRANSACTION;BEGIN TRY-- 第一个操作：插入数据INSERT INTO table_name (column1, column2) VALUES (value1, value2);-- 第二个操作：更新数据UPDATE table_name SET column1 &#x3D; new_value WHERE conditi">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://api.likepoems.com/img/pc/">
-<meta property="article:published_time" content="2024-12-30T02:07:48.000Z">
-<meta property="article:modified_time" content="2024-12-30T09:57:15.088Z">
-<meta property="article:tag" content="Python">
+<meta property="og:image" content="https://api.likepoems.com/img/pixiv/">
+<meta property="article:published_time" content="2023-12-22T11:31:09.000Z">
+<meta property="article:modified_time" content="2024-12-30T11:39:28.699Z">
+<meta property="article:tag" content="Mysql">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://api.likepoems.com/img/pc/">
+<meta name="twitter:image" content="https://api.likepoems.com/img/pixiv/">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Python的请求库Pycurl编译流程 - 二口</title>
+  <title>部分sql语句 - 二口</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Python的请求库Pycurl编译流程"></span>
+            <span id="subtitle" data-typed-text="部分sql语句"></span>
           
         </div>
 
@@ -226,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-12-30 10:07" pubdate>
-          December 30, 2024 am
+        <time datetime="2023-12-22 19:31" pubdate>
+          December 22, 2023 pm
         </time>
       </span>
     
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          231 words
+          234 words
         
       </span>
     
@@ -295,31 +295,22 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Python的请求库Pycurl编译流程</h1>
+            <h1 id="seo-header">部分sql语句</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="pycurl是python的用于请求的第三方库，"><a href="#pycurl是python的用于请求的第三方库，" class="headerlink" title="pycurl是python的用于请求的第三方库，"></a>pycurl是python的用于请求的第三方库，</h2><blockquote>
-<p>1.支持http2</p>
-<p>2.能修改ja3指纹来通过浏览器tls指纹校验</p>
-</blockquote>
-<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><blockquote>
-<p>1.下载pycurl的编译包,<a target="_blank" rel="noopener" href="https://alist.whyyzs.top/d/share/downloads/pycurl%E7%BC%96%E8%AF%91/pycurl.zip?sign=eeL7WEMRM0gsk7ng3cenZa4XnnZrqNgdbMfHxCGRbD0=:0">[下载链接]</a></p>
-</blockquote>
-<blockquote>
-<p>2.因为pycurl底层是有c所写，需要用到visual studio 生成工具，下载链接</p>
-</blockquote>
-<blockquote>
-<p>3.以2022版本为例，下载生成工具后打开”x64 Native Tools Command Prompt for VS 2022”命令行窗口</p>
-</blockquote>
-<blockquote>
-<p>4.cd 到pycurl包中的 pycurl-REL_7_45_2 文件夹中(如果需要把pycurl编译在虚拟环境中，请先激活虚拟环境)，输入命令:<br>python setup.py install –curl-dir&#x3D;D:\pycurl\pycurl\lib\libcurl –use-libcurl-dll –openssl-dir&#x3D;D:\pycurl\pycurl\lib\openssl –with-openssl<br>其中路径稍作修改，替换为包中正确路径,即可编译。</p>
-</blockquote>
-<blockquote>
-<p>5.如果在运行代码的时候导入pycurl报错，提示dll文件找不到，请把pycurl\lib\libcurl\bin文件夹中的libcurl.dll文件移到已经编译好的pycurl的egg文件中(pycurl-7.45.2-py3.10-win-amd64.egg中)</p>
-</blockquote>
+                <h3 id="事务"><a href="#事务" class="headerlink" title="事务:"></a>事务:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs mysql">BEGIN TRANSACTION;<br>BEGIN TRY<br>-- 第一个操作：插入数据<br>INSERT INTO table_name (column1, column2) VALUES (value1, value2);<br><br>-- 第二个操作：更新数据<br>UPDATE table_name SET column1 = new_value WHERE condition;<br><br>-- 第三个操作：删除数据<br>DELETE FROM table_name WHERE condition;<br>COMMIT; -- 如果所有操作都成功，则提交事务<br><br>END TRY<br>BEGIN CATCH<br>ROLLBACK; -- 发生异常时回滚事务<br>END CATCH;<br></code></pre></td></tr></table></figure>
 
+
+<h3 id="多行数据进行拼接，并以逗号分隔的功能（以期刊名称分组）"><a href="#多行数据进行拼接，并以逗号分隔的功能（以期刊名称分组）" class="headerlink" title="多行数据进行拼接，并以逗号分隔的功能（以期刊名称分组）"></a>多行数据进行拼接，并以逗号分隔的功能（以期刊名称分组）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT 期刊名称, GROUP_CONCAT(doi SEPARATOR &#x27;,&#x27;) AS names FROM articles GROUP BY 期刊名称;<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="临时会话"><a href="#临时会话" class="headerlink" title="临时会话:"></a>临时会话:</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mysql">创建临时表，当前会话使用：<br>CREATE TEMPORARY TABLE temp_table_name AS SELECT column1, column2, … FROM your_query;<br>创建临时表，当前查询语句使用：<br>WITH order_totals AS (<br>SELECT SUM(total) AS total_amount<br>FROM orders<br>WHERE order_date &lt;= &#x27;2022-02-28&#x27; )； SELECT total_amount FROM order_totals; <br></code></pre></td></tr></table></figure>
+
+<h3 id="根据条件进行条件判断和返回不同的结果："><a href="#根据条件进行条件判断和返回不同的结果：" class="headerlink" title="根据条件进行条件判断和返回不同的结果："></a>根据条件进行条件判断和返回不同的结果：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT * , CASE WHEN access=&#x27;Open Access&#x27; THEN &#x27;open&#x27; ELSE &#x27;no&#x27; END as &#x27;权限&#x27; FROM 5_15_articles 更新: UPDATE students SET grade = CASE WHEN score &gt;= 90 THEN &#x27;A&#x27;<br>WHEN score &gt;= 80 THEN &#x27;B&#x27;<br>WHEN score &gt;= 70 THEN &#x27;C&#x27;<br>WHEN score &gt;= 60 THEN &#x27;D&#x27;<br>ELSE &#x27;F&#x27;<br>END<br>WHERE score &gt;= 60;<br></code></pre></td></tr></table></figure>
+
+<h3 id="触发器："><a href="#触发器：" class="headerlink" title="触发器："></a>触发器：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs mysql">SELECT *<br>FROM pg_proc<br>WHERE proname = &#x27;set_date_on_insert&#x27;;<br><br>SELECT trigger_name, event_object_table, action_statement<br>FROM information_schema.triggers<br>WHERE event_object_table = &#x27;journal_article_list&#x27;;<br><br>CREATE TRIGGER update_trigger<br>BEFORE INSERT OR UPDATE ON journal_article_list<br>FOR EACH ROW<br>EXECUTE FUNCTION set_date_on_update();<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -331,7 +322,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
+        <a href="/tags/Mysql/" class="print-no-link">#Mysql</a>
       
     </div>
   
@@ -343,15 +334,15 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Python的请求库Pycurl编译流程</div>
-      <div>https://ww.whyyzs.top/2024/12/30/Python的请求库Pycurl编译流程/</div>
+      <div>部分sql语句</div>
+      <div>https://ww.whyyzs.top/2023/12/22/部分sql语句/</div>
     </div>
     <div class="license-meta">
       
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>December 30, 2024</div>
+          <div>December 22, 2023</div>
         </div>
       
       
@@ -383,21 +374,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/12/30/%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6-%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9-%E8%A2%AB%E5%93%AA%E4%B8%AA%E8%BF%9B%E7%A8%8B%E4%BD%BF%E7%94%A8%E3%80%90%E6%96%87%E4%BB%B6%E5%B7%B2%E5%9C%A8%E5%8F%A6%E4%B8%80%E7%A8%8B%E5%BA%8F%E4%B8%AD%E6%89%93%E5%BC%80%E3%80%91/" title="查看文件(或文件夹)被哪个进程使用【文件已在另一程序中打开】">
+                      <a href="/2024/07/24/%E6%9F%90%E5%BA%A6%E6%97%8B%E8%BD%AC%E9%AA%8C%E8%AF%81%E7%A0%81%E9%80%86%E5%90%91%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B%E5%92%8C%E6%BA%90%E7%A0%81/" title="某度旋转验证码逆向分析流程和源码">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">查看文件(或文件夹)被哪个进程使用【文件已在另一程序中打开】</span>
+                        <span class="hidden-mobile">某度旋转验证码逆向分析流程和源码</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2024/12/27/JavaScript%E5%B8%B8%E7%94%A8%E7%9A%84Hook%E8%84%9A%E6%9C%AC/" title="JavaScript常用的Hook脚本">
-                        <span class="hidden-mobile">JavaScript常用的Hook脚本</span>
-                        <span class="visible-mobile">Next</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
